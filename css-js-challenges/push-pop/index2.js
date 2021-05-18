@@ -1,0 +1,31 @@
+function setUp() {
+  let player1Time = 102;
+  let player2Time = 107;
+
+  // cmd+d - ctrl+d
+  function getFastestRaceTime() {
+    if (player1Time < player2Time) {
+      return player1Time;
+    } else if (player2Time < player1Time) {
+      return player2Time;
+    } else {
+      return player1Time;
+    }
+  }
+
+  let fastestRace = getFastestRaceTime();
+  console.log(fastestRace);
+
+  // Write a function that returns the total race time
+  function totalRace() {
+    return player1Time + player2Time;
+  }
+  let totalTime = totalRace();
+  console.log(totalTime);
+  // Call/invoke the function and store the returned value in a new variable
+  // Finally, log the variable out
+}
+
+window.onload = function () {
+  setUp();
+};
